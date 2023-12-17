@@ -54,6 +54,15 @@
   list-style-type: disc;
 }
 .imp_card {
-  display: flexbox;
+  /* display: flexbox; */
   justify-content: space-between;
+}
+.div1 {
+  float: left;
+  cursor: pointer;
+}
+
+.div1 {
+  float: right;
+  cursor: pointer;
 }

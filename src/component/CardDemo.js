@@ -4,11 +4,7 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import "./Card.css";
 
-import DeleteIcon from "@mui/icons-material/Delete";
-import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
-import CreateIcon from "@mui/icons-material/Create";
-import { Delete } from "@material-ui/icons";
+import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 
 export default function CardDemo(props) {
   return (
@@ -25,16 +21,16 @@ export default function CardDemo(props) {
             </div>
             <div className="imp_button">
               {" "}
-              <Tooltip title="Edit">
-                <IconButton>
-                  <CreateIcon onClick={() => props.Update(props.id)} />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="Delete">
-                <IconButton>
-                  <DeleteIcon onClick={() => props.Delete(props.id)} />
-                </IconButton>
-              </Tooltip>
+              <div className="div1">
+                {" "}
+                <EditIcon boxSize={20} onClick={() => props.Update(props.id)} />
+              </div>
+              <div className="div2">
+                <DeleteIcon
+                  boxSize={20}
+                  onClick={() => props.Delete(props.id)}
+                />
+              </div>
             </div>
           </div>
         </div>
